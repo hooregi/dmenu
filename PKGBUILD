@@ -1,6 +1,6 @@
 # Maintainer: Hooregi <hooregi@halo.fm>
 pkgname=dmenu-hooregi-git
-pkgver=5.0.r580.3a37fcd
+pkgver=5.0.r581.17eb564
 pkgrel=1
 epoch=
 pkgdesc="Hooregi's build of suckless' dynamic menu (dmenu)"
