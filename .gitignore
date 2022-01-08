@@ -1,1 +1,5 @@
 *.diff
+config.h
+dmenu
+stest
+PKGBUILD
