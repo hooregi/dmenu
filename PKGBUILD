@@ -1,6 +1,6 @@
 # Maintainer: Hooregi <hooregi@halo.fm>
 pkgname=dmenu-hooregi-git
-pkgver=5.0.r581.17eb564
+pkgver=5.0.r582.d7109c1
 pkgrel=1
 epoch=
 pkgdesc="Hooregi's build of suckless' dynamic menu (dmenu)"
@@ -8,8 +8,8 @@ arch=(x86_64)
 url="https://gitlab.com/Hooregi/dmenu.git"
 license=('MIT')
 groups=()
-depends=(nerd-fonts-fira-code)
-makedepends=(git)
+depends=('coreutils' 'fontconfig' 'freetype2' 'glibc' 'libx11' 'libxft' 'libxinerama' 'sh' 'nerd-fonts-fira-code')
+makedepends=('git')
 checkdepends=()
 optdepends=()
 provides=(dmenu)
