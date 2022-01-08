@@ -1,5 +1,4 @@
-*.diff
-config.h
+patches/
+*.o
 dmenu
 stest
-PKGBUILD
