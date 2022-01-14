@@ -33,5 +33,5 @@ Download the source code from this repository:
 ```
 git clone https://gitlab.com/Hooregi/dmenu.git
 cd dmenu
-sudo make clean install && rm config.h
+sudo make clean install
 ```

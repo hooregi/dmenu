@@ -8,12 +8,12 @@ arch=(x86_64)
 url="https://gitlab.com/Hooregi/dmenu.git"
 license=('MIT')
 groups=()
-depends=('coreutils' 'fontconfig' 'freetype2' 'glibc' 'libx11' 'libxft' 'libxinerama' 'sh' 'nerd-fonts-fira-code')
+depends=('coreutils' 'fontconfig' 'freetype2' 'glibc' 'libx11' 'libxft' 'libxinerama' 'sh')
 makedepends=('git')
 checkdepends=()
 optdepends=()
-provides=(dmenu)
-conflicts=(dmenu)
+provides=('dmenu')
+conflicts=('dmenu')
 replaces=()
 backup=()
 options=()
@@ -26,19 +26,19 @@ validpgpkeys=()
 
 pkgver() {
 	cd "${_pkgname}"
-    printf "5.0.r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+  printf "5.0.r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 build() {
 	cd dmenu
-    make X11INC=/usr/include/X11 X11LIB=/usr/lib/X11
+  make X11INC=/usr/include/X11 X11LIB=/usr/lib/X11
 }
 
 package() {
-    cd dmenu
-    mkdir -p ${pkgdir}/opt/${pkgname}
-    cp -rf * ${pkgdir}/opt/${pkgname}
-    make PREFIX=/usr DESTDIR="${pkgdir}" install
-    install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
-    install -Dm644 README "${pkgdir}/usr/share/doc/${pkgname}/README"
+  cd dmenu
+  mkdir -p ${pkgdir}/opt/${pkgname}
+  cp -rf * ${pkgdir}/opt/${pkgname}
+  make PREFIX=/usr DESTDIR="${pkgdir}" install
+  install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+  install -Dm644 README "${pkgdir}/usr/share/doc/${pkgname}/README"
 }
